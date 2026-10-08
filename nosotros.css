@@ -1,0 +1,129 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8ef;
+    color: #3b2418;
+}
+
+
+/* ================= ENCABEZADO ================= */
+
+header {
+    background-color: #7b2d26;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* ================= NAVEGACIÓN ================= */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+
+/* ================= PORTAL NOSOTROS ================= */
+
+main {
+    min-height: calc(100vh - 140px);
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 60px 30px;
+}
+
+main h1 {
+    color: #7b2d26;
+
+    font-size: 45px;
+
+    margin-bottom: 30px;
+}
+
+main > p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= MISIÓN Y VISIÓN ================= */
+
+.contenedores {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 40px;
+}
+
+.caja {
+    background-color: white;
+
+    width: 350px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.caja h2 {
+    color: #c44536;
+
+    margin-bottom: 15px;
+}
+
+.caja p {
+    line-height: 1.6;
+}
+
+
+/* ================= PIE ================= */
+
+footer {
+    background-color: #3b2418;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
