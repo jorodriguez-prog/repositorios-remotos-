@@ -1,127 +1,145 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Inicio | Empanadas La Esquina</title>
+
+    <!-- Conecta esta página con inicio.css -->
     <link rel="stylesheet" href="inicio.css">
+
+    <!-- Estilos para el aviso emergente de Políticas de Privacidad -->
+    <style>
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            padding: 20px;
+            box-sizing: border-box;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-container {
+            background-color: #ffffff;
+            max-width: 500px;
+            width: 100%;
+            max-height: 85vh;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal-header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: #d35400;
+        }
+
+        .modal-body {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .modal-body h3 {
+            margin: 12px 0 5px 0;
+            color: #222;
+            font-size: 1rem;
+        }
+
+        .modal-body p {
+            margin: 0 0 10px 0;
+        }
+
+        .modal-footer {
+            text-align: right;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .btn-aceptar {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-aceptar:hover {
+            background-color: #d35400;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <!-- Control de aceptación de términos -->
-    <input type="checkbox" id="aceptar-terminos">
-
-    <!-- VENTANA EMERGENTE -->
-    <div class="modal-legal">
-        <div class="contenido-legal">
-
-            <div class="legal-encabezado">
-                <span class="legal-icono">🥟</span>
-                <h2>¡Bienvenido a Empanadas La Esquina!</h2>
-                <p>Antes de entrar, lee nuestros términos y políticas.</p>
+    <!-- ================= VENTANA EMERGENTE (MODAL DE POLÍTICAS) ================= -->
+    <div id="modalPoliticas" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>📜 Términos y Políticas de Privacidad</h2>
             </div>
+            <div class="modal-body">
+                <p>Bienvenido a <strong>Empanadas La Esquina</strong>. Antes de explorar nuestro menú y realizar pedidos, por favor lee y acepta nuestras políticas de uso y privacidad.</p>
+                
+                <h3>1. Tratamiento de Datos</h3>
+                <p>Los datos que proporciones para realizar pedidos (nombre, teléfono, dirección en Jarabacoa) serán utilizados exclusivamente para completar la entrega de tus productos.</p>
 
-            <div class="legal-texto">
+                <h3>2. Calidad del Servicio</h3>
+                <p>Garantizamos la preparación de nuestras empanadas e ingredientes siguiendo los más altos estándares de calidad e higiene.</p>
 
-                <h3>1. Términos y Condiciones</h3>
-
-                <h4>Productos</h4>
-                <p>
-                    Ofrecemos empanadas frescas y deliciosas,
-                    preparadas con ingredientes seleccionados.
-                    Los productos están sujetos a disponibilidad.
-                </p>
-
-                <h4>Precios y pagos</h4>
-                <p>
-                    Los precios se mostrarán en nuestro menú.
-                    Los pagos se realizarán mediante los métodos
-                    aceptados por el negocio.
-                </p>
-
-                <h4>Pedidos</h4>
-                <p>
-                    El cliente debe proporcionar información correcta
-                    para realizar su pedido. Los pedidos estarán
-                    sujetos a confirmación y al tiempo de preparación.
-                </p>
-
-                <h4>Entregas</h4>
-                <p>
-                    El costo y el tiempo de entrega dependerán
-                    de la ubicación del cliente y del servicio disponible.
-                </p>
-
-                <h4>Cancelaciones y reclamaciones</h4>
-                <p>
-                    Si ocurre algún problema con un pedido,
-                    el cliente podrá comunicarse con nosotros
-                    para buscar una solución.
-                </p>
-
-                <h3>2. Política de Privacidad</h3>
-
-                <h4>Información recopilada</h4>
-                <p>
-                    Podemos solicitar datos como el nombre,
-                    teléfono y dirección de entrega cuando sean
-                    necesarios para gestionar un pedido.
-                </p>
-
-                <h4>Uso de la información</h4>
-                <p>
-                    Los datos proporcionados se utilizarán para
-                    confirmar pedidos, coordinar entregas y responder
-                    consultas de los clientes.
-                </p>
-
-                <h4>Protección de datos</h4>
-                <p>
-                    Nos comprometemos a tratar la información
-                    personal con cuidado y a no utilizarla para
-                    fines ajenos al servicio sin una base adecuada.
-                </p>
-
-                <h4>Compartir información</h4>
-                <p>
-                    La información solo se compartirá cuando sea
-                    necesario para gestionar el servicio o cuando
-                    exista una obligación legal aplicable.
-                </p>
-
-                <h4>Contacto y consultas</h4>
-                <p>
-                    Para realizar preguntas sobre tus datos personales,
-                    pedidos o reclamaciones, utiliza los medios de
-                    contacto disponibles en nuestra página web.
-                </p>
-
-                <h3>3. Aceptación</h3>
-                <p>
-                    Al seleccionar el botón de aceptación, confirmas
-                    que has leído estos términos y la política de
-                    privacidad de Empanadas La Esquina.
-                </p>
-
+                <h3>3. Uso de Cookies</h3>
+                <p>Utilizamos cookies esenciales para mejorar tu experiencia de navegación y recordar tus preferencias durante la visita.</p>
             </div>
-
-            <!-- Al pulsar, se cierra la ventana -->
-            <label for="aceptar-terminos" class="boton-aceptar">
-                Aceptar y continuar
-            </label>
-
-            <p class="aviso-legal">
-                Empanadas La Esquina · Jarabacoa, República Dominicana
-            </p>
-
+            <div class="modal-footer">
+                <button class="btn-aceptar" onclick="cerrarModal()">Aceptar y Continuar</button>
+            </div>
         </div>
     </div>
 
-    <!-- ENCABEZADO DE LA PÁGINA -->
+    <!-- ================= ENCABEZADO ================= -->
+
     <header>
-        <div class="logo">🥟 Empanadas La Esquina</div>
+
+        <div class="logo">
+            🥟 Empanadas La Esquina
+        </div>
 
         <nav>
             <a href="index.html">Inicio</a>
@@ -130,14 +148,20 @@
             <a href="promociones.html">Promociones</a>
             <a href="contacto.html">Contacto</a>
         </nav>
+
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
+
+    <!-- ================= CONTENIDO DE ESTE PORTAL ================= -->
+
     <main>
+
         <div class="contenido">
 
             <div class="texto">
+
                 <h1>Empanadas La Esquina</h1>
+
                 <h2>El mejor sabor de Jarabacoa</h2>
 
                 <p>
@@ -145,22 +169,36 @@
                     preparadas con ingredientes frescos y mucho sabor.
                 </p>
 
-                <a href="menu.html" class="boton">Ver Menú</a>
+                <!-- Este botón abre el portal del menú -->
+                <a href="menu.html" class="boton">
+                    Ver Menú
+                </a>
+
             </div>
 
-            <div class="empanada">🥟</div>
+
+            <!-- Decoración -->
+            <div class="empanada">
+                🥟
+            </div>
 
         </div>
+
     </main>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- ================= PIE DE PÁGINA ================= -->
+
     <footer>
         <p>© 2026 Empanadas La Esquina</p>
         <p>Jarabacoa, República Dominicana</p>
-        <a href="#politicas" class="enlace-legal">
-            Términos y Privacidad
-        </a>
     </footer>
+
+    <!-- Script para ocultar la ventana emergente al hacer clic -->
+    <script>
+        function cerrarModal() {
+            document.getElementById('modalPoliticas').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
