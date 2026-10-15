@@ -1,48 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Inicio | Empanadas La Esquina</title>
-
-    <!-- Conecta esta página con inicio.css -->
     <link rel="stylesheet" href="inicio.css">
-
-    <footer>
-    <p>&copy; 2026 Empanadas La Esquina</p>
-    <a href="terminos.html">Términos y condiciones</a>
-</footer>
-
-<a href="terminos.html">Términos y condiciones</a>
-
 </head>
 
 <body>
 
-    <!-- ================= ENCABEZADO ================= -->
+    <!-- Control de aceptación de términos -->
+    <input type="checkbox" id="aceptar-terminos">
 
-    <header>
+    <!-- VENTANA EMERGENTE -->
+    <div class="modal-legal">
+        <div class="contenido-legal">
 
-        <div class="logo">
-            🥟 Empanadas La Esquina
+            <div class="legal-encabezado">
+                <span class="legal-icono">🥟</span>
+                <h2>¡Bienvenido a Empanadas La Esquina!</h2>
+                <p>Antes de entrar, lee nuestros términos y políticas.</p>
+            </div>
+
+            <div class="legal-texto">
+
+                <h3>1. Términos y Condiciones</h3>
+
+                <h4>Productos</h4>
+                <p>
+                    Ofrecemos empanadas frescas y deliciosas,
+                    preparadas con ingredientes seleccionados.
+                    Los productos están sujetos a disponibilidad.
+                </p>
+
+                <h4>Precios y pagos</h4>
+                <p>
+                    Los precios se mostrarán en nuestro menú.
+                    Los pagos se realizarán mediante los métodos
+                    aceptados por el negocio.
+                </p>
+
+                <h4>Pedidos</h4>
+                <p>
+                    El cliente debe proporcionar información correcta
+                    para realizar su pedido. Los pedidos estarán
+                    sujetos a confirmación y al tiempo de preparación.
+                </p>
+
+                <h4>Entregas</h4>
+                <p>
+                    El costo y el tiempo de entrega dependerán
+                    de la ubicación del cliente y del servicio disponible.
+                </p>
+
+                <h4>Cancelaciones y reclamaciones</h4>
+                <p>
+                    Si ocurre algún problema con un pedido,
+                    el cliente podrá comunicarse con nosotros
+                    para buscar una solución.
+                </p>
+
+                <h3>2. Política de Privacidad</h3>
+
+                <h4>Información recopilada</h4>
+                <p>
+                    Podemos solicitar datos como el nombre,
+                    teléfono y dirección de entrega cuando sean
+                    necesarios para gestionar un pedido.
+                </p>
+
+                <h4>Uso de la información</h4>
+                <p>
+                    Los datos proporcionados se utilizarán para
+                    confirmar pedidos, coordinar entregas y responder
+                    consultas de los clientes.
+                </p>
+
+                <h4>Protección de datos</h4>
+                <p>
+                    Nos comprometemos a tratar la información
+                    personal con cuidado y a no utilizarla para
+                    fines ajenos al servicio sin una base adecuada.
+                </p>
+
+                <h4>Compartir información</h4>
+                <p>
+                    La información solo se compartirá cuando sea
+                    necesario para gestionar el servicio o cuando
+                    exista una obligación legal aplicable.
+                </p>
+
+                <h4>Contacto y consultas</h4>
+                <p>
+                    Para realizar preguntas sobre tus datos personales,
+                    pedidos o reclamaciones, utiliza los medios de
+                    contacto disponibles en nuestra página web.
+                </p>
+
+                <h3>3. Aceptación</h3>
+                <p>
+                    Al seleccionar el botón de aceptación, confirmas
+                    que has leído estos términos y la política de
+                    privacidad de Empanadas La Esquina.
+                </p>
+
+            </div>
+
+            <!-- Al pulsar, se cierra la ventana -->
+            <label for="aceptar-terminos" class="boton-aceptar">
+                Aceptar y continuar
+            </label>
+
+            <p class="aviso-legal">
+                Empanadas La Esquina · Jarabacoa, República Dominicana
+            </p>
+
         </div>
+    </div>
 
-        <!--
-            IMPORTANTE:
-            Cada enlace abre OTRO ARCHIVO HTML.
-            No son secciones de esta página.
-        -->
+    <!-- ENCABEZADO DE LA PÁGINA -->
+    <header>
+        <div class="logo">🥟 Empanadas La Esquina</div>
 
         <nav>
             <a href="index.html">Inicio</a>
@@ -51,20 +130,14 @@
             <a href="promociones.html">Promociones</a>
             <a href="contacto.html">Contacto</a>
         </nav>
-
     </header>
 
-
-    <!-- ================= CONTENIDO DE ESTE PORTAL ================= -->
-
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-
         <div class="contenido">
 
             <div class="texto">
-
                 <h1>Empanadas La Esquina</h1>
-
                 <h2>El mejor sabor de Jarabacoa</h2>
 
                 <p>
@@ -72,31 +145,22 @@
                     preparadas con ingredientes frescos y mucho sabor.
                 </p>
 
-                <!-- Este botón abre el portal del menú -->
-                <a href="menu.html" class="boton">
-                    Ver Menú
-                </a>
-
+                <a href="menu.html" class="boton">Ver Menú</a>
             </div>
 
-
-            <!-- Decoración -->
-            <div class="empanada">
-                🥟
-            </div>
+            <div class="empanada">🥟</div>
 
         </div>
-
     </main>
 
-    <!-- ================= PIE DE PÁGINA ================= -->
-
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <p>© 2026 Empanadas La Esquina 1</p>
+        <p>© 2026 Empanadas La Esquina</p>
         <p>Jarabacoa, República Dominicana</p>
+        <a href="#politicas" class="enlace-legal">
+            Términos y Privacidad
+        </a>
     </footer>
 
-</body>
-</html>    
 </body>
 </html>

@@ -1,159 +1,135 @@
-/* ================= CONFIGURACIÓN GENERAL ================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Control de aceptación */
+#aceptar-terminos {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
 }
 
-body {
+/* Fondo oscuro de la ventana */
+.modal-legal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.78);
+}
+
+/* Al aceptar, desaparece la ventana */
+#aceptar-terminos:checked ~ .modal-legal {
+    display: none;
+}
+
+/* Caja principal */
+.contenido-legal {
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fffaf2;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
     font-family: Arial, sans-serif;
-    background-color: #fff8ef;
-    color: #3b2418;
-
-    /* Evita desplazamientos horizontales */
-    overflow-x: hidden;
 }
 
-
-/* ================= ENCABEZADO ================= */
-
-header {
-    background-color: #7b2d26;
-    color: white;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 50px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-
-/* ================= NAVEGACIÓN ================= */
-
-nav {
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ffd166;
-}
-
-
-/* ================= PORTAL DE INICIO ================= */
-
-main {
-    min-height: calc(100vh - 140px);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contenido {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 100px;
-    padding: 40px;
-}
-
-.texto {
-    max-width: 600px;
-}
-
-.texto h1 {
-    color: #7b2d26;
-    font-size: 55px;
-    margin-bottom: 15px;
-}
-
-.texto h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.texto p {
-    font-size: 19px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-
-/* ================= BOTÓN ================= */
-
-.boton {
-    display: inline-block;
-
-    background-color: #c44536;
-    color: white;
-
-    text-decoration: none;
-
-    padding: 15px 30px;
-    border-radius: 8px;
-
-    font-weight: bold;
-}
-
-.boton:hover {
-    background-color: #7b2d26;
-}
-
-
-/* ================= EMPANADA ================= */
-
-.empanada {
-    font-size: 160px;
-}
-
-
-/* ================= PIE ================= */
-
-footer {
-    background-color: #3b2418;
-    color: white;
-
+/* Encabezado */
+.legal-encabezado {
     text-align: center;
-
-    padding: 20px;
+    border-bottom: 2px solid #f0d4b0;
+    padding-bottom: 15px;
 }
 
+.legal-icono {
+    font-size: 45px;
+}
 
-/* ================= CELULARES ================= */
+.legal-encabezado h2 {
+    color: #a93226;
+    margin: 10px 0;
+    font-size: 23px;
+}
 
-@media (max-width: 750px) {
+.legal-encabezado p {
+    color: #666;
+    font-size: 14px;
+}
 
-    header {
-        flex-direction: column;
-        gap: 20px;
+/* Texto legal */
+.legal-texto {
+    margin: 15px 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.legal-texto h3 {
+    color: #a93226;
+    margin-top: 20px;
+    border-bottom: 1px solid #ead8c3;
+    padding-bottom: 5px;
+}
+
+.legal-texto h4 {
+    margin-top: 13px;
+    color: #71351f;
+}
+
+.legal-texto p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Botón de aceptación */
+.boton-aceptar {
+    display: block;
+    text-align: center;
+    background: #a93226;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-aceptar:hover {
+    background: #7b241c;
+}
+
+.boton-aceptar:focus-visible {
+    outline: 3px solid #333;
+    outline-offset: 3px;
+}
+
+.aviso-legal {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* Enlace del pie de página */
+.enlace-legal {
+    display: inline-block;
+    margin-top: 10px;
+    color: inherit;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .contenido-legal {
+        padding: 18px;
+        max-height: 92vh;
     }
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
+    .legal-encabezado h2 {
+        font-size: 20px;
     }
 
-    .contenido {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .texto h1 {
-        font-size: 40px;
+    .legal-texto p {
+        font-size: 13px;
     }
 }
